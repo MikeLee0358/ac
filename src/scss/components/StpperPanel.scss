@@ -1,11 +1,7 @@
-$gray: #afb1bd;
-$black: #000000;
-$white: #ffffff;
-
 .wraps {
   display: flex;
   gap: 32px;
-  &__step {
+  .step {
     display: flex;
     align-items: center;
     color: $gray;
@@ -16,35 +12,101 @@ $white: #ffffff;
       height: 24px;
       border-radius: 23px;
       border: 1px solid $gray;
-      font-family: Nunito Sans;
-      font-size: 12px;
-      font-weight: 700;
+      @include font-style(Nunito Sans, 12px, 700, null);
     }
     &__title {
       margin-left: 8px;
       margin-right: 32px;
-      font-family: Noto Sans TC;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
+      @include font-style(Noto Sans TC, 16px, 400, 24px);
     }
     &__line {
       width: 60px;
     }
-    &:first-child {
-      .wraps__step__circle {
-        background: $black;
-        border-color: $black;
-        color: white;
-      }
-      .wraps__step__title {
-        color: $black;
-      }
-      .wraps__step__line {
-        background: $black;
+  }
+  .step:nth-of-type(1) {
+    .step__circle {
+      background: $black;
+      border-color: $black;
+      color: $white;
+    }
+    .step__title {
+      color: $black;
+    }
+    .step__line {
+      background: $black;
+    }
+  }
+}
+
+.page-one {
+  @include getNums(3);
+  .step:nth-of-type(3) {
+    .step__line {
+      display: none;
+    }
+  }
+}
+
+.page-two {
+  @include getNums(3);
+  .step:nth-of-type(1) {
+    .step__circle::after {
+      content: "✓";
+    }
+  }
+  .step:nth-of-type(2) {
+    .step__circle {
+      border-color: $black;
+      color: $black;
+    }
+    .step__title {
+      color: $black;
+    }
+    .step__line {
+      border-color: $black;
+    }
+  }
+  .step:nth-of-type(3) {
+    .step__line {
+      display: none;
+    }
+  }
+}
+
+.page-three {
+  .step:nth-of-type(1) {
+    .step__circle::after {
+      content: "✓";
+    }
+  }
+  .step:nth-of-type(2) {
+    .step__circle {
+      border-color: $black;
+      background: $black;
+      color: $white;
+      &::after {
+        content: "✓";
       }
     }
-    &:last-child &__line {
+    .step__title {
+      color: $black;
+    }
+    .step__line {
+      border-color: $black;
+    }
+  }
+  .step:nth-of-type(3) {
+    .step__circle {
+      border-color: $black;
+      color: $black;
+      &::after {
+        content: "3";
+      }
+    }
+    .step__title {
+      color: $black;
+    }
+    .step__line {
       display: none;
     }
   }

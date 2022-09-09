@@ -1,0 +1,14 @@
+@mixin font-style($family, $size, $weight, $height) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin getNums($num) {
+  @for $i from 1 through $num {
+    .step:nth-of-type(#{$i}) .step__circle::after {
+      content: "#{$i}";
+    }
+  }
+}

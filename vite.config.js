@@ -11,4 +11,14 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  // 設置scss全域變數
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import '../global.scss';`
+      }
+    }
+  }
 });
+
+
