@@ -1,3 +1,11 @@
+<template>
+  <main>
+    <StepperPanel :stepper-data="data.stepperData" />
+    <FormPanel />
+    <CartPanel />
+  </main>
+</template>
+
 <script setup>
 import StepperPanel from "../components/StepperPanel.vue";
 import FormPanel from "../components/FormPanel.vue";
@@ -23,11 +31,3 @@ const data = ref({
   CartData: {},
 });
 </script>
-
-<template>
-  <main>
-    <StepperPanel :stepper-data="data.stepperData" />
-    <FormPanel />
-    <CartPanel />
-  </main>
-</template>

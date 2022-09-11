@@ -11,7 +11,7 @@
   </section>
 </template>
 
-<style>
+<style scoped>
 button {
   background: green;
 }
