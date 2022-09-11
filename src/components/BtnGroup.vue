@@ -1,5 +1,5 @@
 <template>
-  <section class="btn-group">
+  <section>
     <button class="previous">
       <img src="../assets/left-arrow@2x.png" alt="previous-step" />
       <span>上一步</span>

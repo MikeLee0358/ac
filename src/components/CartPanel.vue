@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section>
     <h1>購物籃</h1>
     <div class="order-wrap">
       <img src="" alt="pants-img" class="pants-img" />
