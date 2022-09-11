@@ -9,23 +9,19 @@ const data = ref({
     {
       id: 1,
       title: "寄送地址",
-      isActive: true,
     },
     {
       id: 2,
       title: "運送方式",
-      isActive: true,
     },
     {
       id: 3,
       title: "付款資訊",
-      isActive: false,
     },
   ],
   formData: {},
-  CartData: {}
-})
-
+  CartData: {},
+});
 </script>
 
 <template>
@@ -35,6 +31,3 @@ const data = ref({
     <CartPanel />
   </main>
 </template>
-
-
-
