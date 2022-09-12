@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="container">
     <StepperPanel :stepper-data="data.stepperData" />
     <FormPanel />
     <CartPanel />
@@ -7,6 +7,7 @@
 </template>
 
 <script setup>
+import "../scss/layout/HomePage.scss";
 import StepperPanel from "../components/StepperPanel.vue";
 import FormPanel from "../components/FormPanel.vue";
 import CartPanel from "../components/CartPanel.vue";

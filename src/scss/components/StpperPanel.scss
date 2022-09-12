@@ -1,39 +1,45 @@
-.wraps {
-  display: flex;
-  gap: 32px;
-  .step {
-    display: flex;
-    align-items: center;
-    color: $gray;
-    &__circle {
-      display: grid;
-      place-items: center;
-      width: 24px;
-      height: 24px;
-      border-radius: 23px;
-      border: 1px solid $gray;
-      @include font-style(Nunito Sans, 12px, 700, null);
-    }
-    &__title {
-      margin-left: 8px;
-      margin-right: 32px;
-      @include font-style(Noto Sans TC, 16px, 400, 24px);
-    }
-    &__line {
-      width: 60px;
-    }
+.stepper {
+  h1 {
+    @include font-style(Noto Sans TC, 32px, 700, 38px);
   }
-  .step:nth-of-type(1) {
-    .step__circle {
-      background: $black;
-      border-color: $black;
-      color: $white;
+  .wraps {
+    display: flex;
+    margin: 48px 0 64px 0;
+    gap: 32px;
+    .step {
+      display: flex;
+      align-items: center;
+      color: $gray;
+      &__circle {
+        display: grid;
+        place-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 23px;
+        border: 1px solid $gray;
+        @include font-style(Nunito Sans, 12px, 700, null);
+      }
+      &__title {
+        margin-left: 8px;
+        margin-right: 32px;
+        @include font-style(Noto Sans TC, 16px, 400, 24px);
+      }
+      &__line {
+        width: 60px;
+      }
     }
-    .step__title {
-      color: $black;
-    }
-    .step__line {
-      background: $black;
+    .step:nth-of-type(1) {
+      .step__circle {
+        background: $black;
+        border-color: $black;
+        color: $white;
+      }
+      .step__title {
+        color: $black;
+      }
+      .step__line {
+        background: $black;
+      }
     }
   }
 }

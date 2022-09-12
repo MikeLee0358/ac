@@ -1,0 +1,18 @@
+main {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  width: 1440px;
+  gap: 0px 130px;
+  grid-template-areas:
+    "stepper ."
+    "form cart";
+  .stepper {
+    grid-area: stepper;
+  }
+  .form {
+    grid-area: form;
+  }
+  .cart {
+    grid-area: cart;
+  }
+}

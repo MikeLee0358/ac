@@ -1,0 +1,49 @@
+.address {
+  h1 {
+    @include font-style(Noto Sans TC, 24px, 700, 24px);
+    margin-bottom: 24px;
+  }
+  .basic-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 30px;
+    div {
+      display: flex;
+      flex-direction: column;
+      @include font-style(Noto Sans TC, 12px, 400, 16px);
+      label {
+        color: $dark-gray;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      select {
+        padding: 12px 93px 12px 16px;
+        border: 1px solid #4a4a4a;
+        border-radius: 4px;
+        background: $white;
+        color: $black;
+        -webkit-appearance: none;
+      }
+      input {
+        padding: 12px 0px 12px 16px;
+        border: 1px solid #4a4a4a;
+        border-radius: 4px;
+      }
+    }
+    .gender {
+      flex-basis: 33%;
+    }
+    .name,
+    .tel,
+    .email,
+    .address {
+      flex: 1;
+    }
+    .city {
+      flex-basis: 33%;
+      select {
+        color: $dark-gray;
+      }
+    }
+  }
+}
