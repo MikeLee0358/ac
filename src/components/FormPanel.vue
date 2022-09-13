@@ -16,4 +16,5 @@ import FormAddress from "./FormAddress.vue";
 import FormShipping from "./FormShipping.vue";
 import FormPayment from "./FormPayment.vue";
 import BtnGroup from "./BtnGroup.vue";
+
 </script>

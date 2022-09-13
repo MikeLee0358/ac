@@ -11,7 +11,7 @@ import "../scss/layout/HomePage.scss";
 import StepperPanel from "../components/StepperPanel.vue";
 import FormPanel from "../components/FormPanel.vue";
 import CartPanel from "../components/CartPanel.vue";
-import { ref } from "vue";
+import { ref, provide } from "vue";
 
 const data = ref({
   stepperData: [
@@ -31,4 +31,9 @@ const data = ref({
   formData: {},
   CartData: {},
 });
+const shipping = ref([
+  { id: 0, title: "標準運送", description: "約3~7個工作天", price: "免費" },
+  { id: 1, title: "DHL貨運", description: "48小時內送達", price: "$500" },
+]);
+provide("shipping", shipping);
 </script>

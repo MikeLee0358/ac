@@ -1,6 +1,6 @@
 .stepper {
   h1 {
-    @include font-style(Noto Sans TC, 32px, 700, 38px);
+    @include fontStyle(Noto Sans TC, 32px, 700, 38px);
   }
   .wraps {
     display: flex;
@@ -17,12 +17,12 @@
         height: 24px;
         border-radius: 23px;
         border: 1px solid $gray;
-        @include font-style(Nunito Sans, 12px, 700, null);
+        @include fontStyle(Nunito Sans, 12px, 700, null);
       }
       &__title {
         margin-left: 8px;
         margin-right: 32px;
-        @include font-style(Noto Sans TC, 16px, 400, 24px);
+        @include fontStyle(Noto Sans TC, 16px, 400, 24px);
       }
       &__line {
         width: 60px;

@@ -1,6 +1,6 @@
 <template>
   <section class="address">
-    <h1>寄送地址</h1>
+    <h1 class="h1">寄送地址</h1>
     <div class="basic-info">
       <div class="gender">
         <label>稱謂</label>
@@ -38,4 +38,4 @@
   </section>
 </template>
 
-<style src="../scss/components/FormAddress.scss" scoped></style>
+<style src="../scss/components/FormAddress.scss"></style>

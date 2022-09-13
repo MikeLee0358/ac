@@ -1,0 +1,53 @@
+h1 {
+  @include fontStyle(Noto Sans TC, 24px, 700, 24px);
+  margin-bottom: 24px;
+}
+
+.shipping-info {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "radio title price"
+    "radio description .";
+  gap: 2px 20px;
+  padding: 11px 20px;
+  margin-bottom: 24px;
+  width: 435px;
+  height: 60px;
+  border: 1px solid $black;
+  border-radius: 4px;
+  @include fontStyle(Inter, 12px, 400, 16px);
+  .radio {
+    align-self: center;
+    grid-area: radio;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 1px solid $black;
+    &:focus {
+      border: 5px solid $black;
+    }
+  }
+  .default {
+    border: 5px solid $black;
+  }
+  .title {
+    grid-area: title;
+    @include fontStyle(Inter, 14px, 400, 20px);
+  }
+  .description {
+    grid-area: description;
+  }
+  .price {
+    grid-area: price;
+  }
+}
+.shipping-info:nth-of-type(2) {
+  border-color: #f0f0f5;
+  @include fontStyle(Noto Sans TC, 12px, 400, 16px);
+  .title {
+    font-family: "Noto Sans TC";
+    font-weight: 700;
+  }
+}
