@@ -25,13 +25,11 @@
       height: 17px;
       border-radius: 50%;
       border: 1px solid $black;
-      &:focus {
+      &:checked {
         border: 5px solid $black;
       }
     }
-    .radio:checked {
-      border: 5px solid $black;
-    }
+
     .title {
       grid-area: title;
       @include fontStyle(Inter, 14px, 400, 20px);
