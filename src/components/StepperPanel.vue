@@ -20,7 +20,8 @@
 
 <script setup>
 import "../scss/components/StpperPanel.scss";
-const props = defineProps(["stepperData"]);
-// 傳入的頁碼
-const page = 1;
+defineProps({
+  stepperData: Array,
+  page: Object,
+});
 </script>

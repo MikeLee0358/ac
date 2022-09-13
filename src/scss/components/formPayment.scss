@@ -1,0 +1,37 @@
+.payment {
+  h1 {
+    @include fontStyle(Noto Sans TC, 24px, 700, 24px);
+    margin-bottom: 24px;
+  }
+  .credit-info {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px 30px;
+    div {
+      display: flex;
+      flex-direction: column;
+      @include fontStyle(Noto Sans TC, 12px, 700, 16px);
+      label {
+        color: #808080;
+      }
+      input {
+        padding: 12px 18px;
+        border: 1px solid #4a4a4a;
+        border-radius: 4px;
+        font-weight: 400;
+        color: #999999;
+      }
+    }
+    .owner,
+    .number {
+      flex-basis: 60%;
+    }
+    .valid,
+    .password {
+      flex-basis: 45%;
+    }
+  }
+}
+.none {
+  display: none;
+}

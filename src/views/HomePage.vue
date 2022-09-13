@@ -1,7 +1,7 @@
 <template>
   <main class="container">
-    <StepperPanel :stepper-data="data.stepperData" />
-    <FormPanel />
+    <StepperPanel :stepper-data="data.stepperData" :page="page" />
+    <FormPanel :page="page" />
     <CartPanel />
   </main>
 </template>
@@ -28,12 +28,12 @@ const data = ref({
       title: "付款資訊",
     },
   ],
-  formData: {},
-  CartData: {},
 });
 const shipping = ref([
   { id: 0, title: "標準運送", description: "約3~7個工作天", price: "免費" },
   { id: 1, title: "DHL貨運", description: "48小時內送達", price: "$500" },
 ]);
+const page = ref(1);
+provide("page", page);
 provide("shipping", shipping);
 </script>

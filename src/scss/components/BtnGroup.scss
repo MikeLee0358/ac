@@ -1,0 +1,32 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  border-top: 1px solid #e6e6eb;
+  @include fontStyle(Inter, 14px, 400, 20px);
+  img {
+    width: 20px;
+    height: 10px;
+    transform: translateY(-2px);
+  }
+  .next,
+  .previous {
+    display: flex;
+    align-items: center;
+    gap: 12.5px;
+    margin-top: 24px;
+  }
+  .next {
+    padding: 14.5px 47.5px;
+    background: #f67599;
+    border-radius: 8px;
+    color: $white;
+    @include fontStyle(Inter, 14px, 500, 17px);
+  }
+  .none {
+    display: none;
+  }
+  .transparent {
+    opacity: 0;
+  }
+}
