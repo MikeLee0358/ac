@@ -1,10 +1,7 @@
 .stepper {
-  h1 {
-    @include fontStyle(Noto Sans TC, 32px, 700, 38px);
-  }
+  margin-bottom: 64px;
   .wraps {
     display: flex;
-    margin: 48px 0 64px 0;
     gap: 32px;
     .step {
       display: flex;

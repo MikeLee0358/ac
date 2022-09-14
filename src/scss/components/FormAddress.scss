@@ -1,12 +1,12 @@
 .address {
   h1 {
     @include fontStyle(Noto Sans TC, 24px, 700, 24px);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .basic-info {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px 30px;
+    gap: 16px 30px;
     div {
       display: flex;
       flex-direction: column;

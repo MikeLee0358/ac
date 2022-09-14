@@ -1,0 +1,62 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 24px;
+  border: 1px solid $light-gray;
+  border-radius: 8px;
+
+  h1 {
+    @include fontStyle(Noto Sans TC, 18px, 700, 22px);
+  }
+  .delivery-info,
+  .total-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 10px 0 0;
+    border-top: 1px solid $light-gray;
+
+    span {
+      @include fontStyle(Noto Sans TC, 14px, 400, 20px);
+    }
+    span:nth-of-type(2) {
+      @include fontStyle(Nunito Sans, 14px, 700, 17px);
+    }
+  }
+  .order-wrap {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "img title price"
+      "img counter .";
+    gap: 18px 21px;
+    .img {
+      grid-area: img;
+      width: 100px;
+      height: 100px;
+    }
+    .title {
+      grid-area: title;
+      @include fontStyle(Noto Sans TC, 16px, 400, 24px);
+    }
+    .price {
+      grid-area: price;
+      justify-self: end;
+      @include fontStyle(Nunito Sans, 16px, 700, 22px);
+    }
+    .counter {
+      grid-area: counter;
+      .minus,
+      .plus {
+        width: 27px;
+        height: 21px;
+      }
+      .count {
+        position: relative;
+        bottom: 5px;
+        margin: 0 25px;
+        @include fontStyle(Inter, 14px, 500, 17px);
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 <template>
   <section class="stepper">
-    <h1>結帳</h1>
     <div
       class="wraps"
       :class="[
@@ -22,6 +21,6 @@
 import "../scss/components/StpperPanel.scss";
 defineProps({
   stepperData: Array,
-  page: Object,
+  page: Number,
 });
 </script>

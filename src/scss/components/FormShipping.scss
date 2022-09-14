@@ -14,7 +14,7 @@
     margin-bottom: 24px;
     width: 435px;
     height: 60px;
-    border: 1px solid $black;
+    border: 1px solid $light-gray;
     border-radius: 4px;
     @include fontStyle(Inter, 12px, 400, 16px);
     .radio {
@@ -27,6 +27,17 @@
       border: 1px solid $black;
       &:checked {
         border: 5px solid $black;
+      }
+      &:checked::before {
+        content: "";
+        position: relative;
+        width: 435px;
+        height: 60px;
+        border: 1px solid $black;
+        border-radius: 4px;
+        display: block;
+        bottom: 27px;
+        right: 25px;
       }
     }
 
@@ -42,7 +53,8 @@
     }
   }
   .shipping-info:nth-of-type(2) {
-    border-color: #f0f0f5;
+    border-color: $light-gray;
+    margin-bottom: 128px;
     @include fontStyle(Noto Sans TC, 12px, 400, 16px);
     .title {
       font-family: "Noto Sans TC";

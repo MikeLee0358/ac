@@ -2,10 +2,18 @@ main {
   display: grid;
   grid-template-columns: 55% 40%;
   width: 1440px;
+  padding: 140px 165px;
+
   gap: 0px 130px;
   grid-template-areas:
-    "stepper ."
+    "h1 h1"
+    "stepper cart"
     "form cart";
+  .h1 {
+    grid-area: h1;
+    margin-bottom: 48px;
+    @include fontStyle(Noto Sans TC, 32px, 700, 38px);
+  }
   .stepper {
     grid-area: stepper;
   }
